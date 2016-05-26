@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/problem.css" rel="stylesheet">
+    <script src="https://www.google.com/jsapi"></script>
+        <script>
+        google.load('visualization', '1.0', {
+            'packages': ['corechart']
+        });
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '年');
+            data.addColumn('number', 'スマートフォン');
+            data.addColumn('number', '子供向けスマートフォン');
+            data.addColumn('number', '子供向け携帯電話');
+            data.addColumn('number', 'その他の携帯電話');
+            data.addRows([
+                ['2010', 2.9, 0, 15.7, 81.4],
+                ['2011', 5.7, 0, 18.1, 76.2],
+                ['2012', 36.0, 0, 21.9, 42.1],
+                ['2013', 56.8, 1.6, 19.8, 21.8],
+        ]);
+
+            var options = {
+                title: '[図６]小中高生の携帯電話・スマートフォンの所有率  　　 (単位：％)',
+                width: 600,
+                height: 400,
+//                legend: { position: 'bottom', maxLines: 2},
+                isStacked: true,
+            }
+            
+            var chart = new google.visualization.BarChart(document.getElementById('chart6'));
+            chart.draw(data, options);
+        }
+    </script>
+    </head>
+    
+   <header>
+    <h1 class="title">日本の自殺問題について</h1>
+
+    <hr>
+
+    <nav class="navbar navbar-default">
+       <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand visible-xs" href="">MENU</a>
+        </div>
+        
+        <div class="collapse navbar-collapse target">
+            <ul class="nav navbar-nav">
+                <li><a href="kadai01.html">はじめに</a>
+                </li>
+                <li><a href="kadai02.html">20年間の推移</a>
+                </li>
+                <li><a href="kadai03.html">小中高生の状況</a>
+                </li>
+                <li class="active"><a href="#">予防策</a>
+                </li>
+                 <li><a href="kadai05.html">参考サイト</a>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+
+<body>
+    <article>
+    
+    <h2>４．今後の予防策</h2>
+
+    <ul>
+       <li class="yobou">学校で自殺予防や命の大切さに関する授業を取り入れる</li>
+      
+        <li class="yobou">SNSの利用方法を見直す</li>
+       <div class="row">
+            <div id="chart6" class="col-md-6"></div>
+            <div class="col-md-6">
+             
+                <p>スマートフォンの所有率は年々上昇しており、今後もさらに広がっていくと考えられる。SNSを利用したいじめが原因で自殺するという事例もあるため、一人一人が正しい使い方について考える必要がある。</p>
+                <p>具体的には、学校でスマートフォンの使い方に関する授業を取り入れるほか、家庭でも利用時間や利用方法などの約束を決めるなどの対策をとれば意識向上につながるのではないかと思う。</p>
+            </div>
+        </div>
+    
+        <li class="yobou">家や学校以外にも相談しやすい場所をつくる</li>
+        <div class="row">
+      
+        <div class="col-md-6"><blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">もうすぐ二学期。学校が始まるのが死ぬほどつらい子は、学校を休んで図書館へいらっしゃい。マンガもライトノベルもあるよ。一日いても誰も何も言わないよ。９月から学校へ行くくらいなら死んじゃおうと思ったら、逃げ場所に図書館も思い出してね。</p>&mdash; 鎌倉市図書館 (@kamakura_tosyok) <a href="https://twitter.com/kamakura_tosyok/status/636329967668695040">2015, 8月 26</a></blockquote>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+            
+            <div class="col-md-6"><blockquote class="twitter-tweet" lang="ja"><p lang="ja" dir="ltr">つらいきもちをかかえているあなたへ　&#10;図書館はあなたの居場所になりたいと思っています。心のすみっこに「としょかん」をおいてね。&#10;図書館にはいろいろな本があるよ。疲れた心によりそうような本が見つかるかも。</p>&mdash; 鎌倉市図書館 (@kamakura_tosyok) <a href="https://twitter.com/kamakura_tosyok/status/636732613802131457">2015, 8月 27</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        </div>
+        </ul>
+        
+   </article>
+
+  
+
+    <footer>
+<ol class="breadcrumb">
+                    <li><a href="kadai01.html">はじめに</a>
+                    </li>
+                    <li><a href="kadai02.html">20年間の推移</a>
+                    </li>
+                    <li><a href="kadai03.html">小中高生の状況</a>
+                    </li>
+                    <li class="active">予防策</a>
+                    </li>
+                    <li><a href="kadai05.html">参考サイト</a>
+                    </li>
+        </ol>
+        <div class="text-center"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>2015　日本の自殺問題について＠白木美帆</div>
+      
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
