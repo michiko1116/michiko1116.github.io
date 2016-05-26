@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/problem.css" rel="stylesheet">
+    <script src="https://www.google.com/jsapi"></script>
+    <script>
+        google.load('visualization', '1.0', {
+            'packages': ['corechart']
+        });
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', '国');
+            data.addColumn('number', '自殺');
+            data.addColumn('number', '事故');
+            data.addRows([
+                ['日本', 20.1, 7.1],
+                ['フランス', 9.6, 13.8],
+                ['ドイツ', 7.6, 9.3],
+                ['カナダ', 11.2, 18.7],
+                ['アメリカ', 12.1, 31.7],
+                ['イギリス', 6.7, 12.7],
+                ['イタリア', 4.4, 13.2],
+                ['韓国', 22.2, 10.4],
+
+        ]);
+
+            var options = {
+                title: '[図１] 主要国における自殺及び事故による死亡率　　(単位：人/10万人)',
+                width: 650,
+                height: 400,
+            }
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart1'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<header>
+    <h1 class="title">日本の自殺問題について</h1>
+
+    <hr>
+
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs" href="">MENU</a>
+        </div>
+
+        <div class="collapse navbar-collapse target">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">はじめに</a>
+                </li>
+                <li><a href="kadai02.html">20年間の推移</a>
+                </li>
+                <li><a href="kadai03.html">小中高生の状況</a>
+                </li>
+                <li><a href="kadai04.html">予防策</a>
+                </li>
+                <li><a href="kadai05.html">参考サイト</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+
+
+
+<body>
+
+
+    <article>
+        <h2>1－1．はじめに</h2>
+
+        <p>テレビなどで自殺による死亡者が出たという報道を聞くことがある。日本の自殺率は世界的に見ても高いという話を聞いたことがあるため、主要国と比較するとともに日本の自殺者数・自殺率についてのデータをまとめる。また、特に小中高生といった若い世代に注目し、自殺を予防する方法を考える。</p>
+
+        <h2>1－2．主要国との比較</h2>
+
+        <p>[表１]　主要国の15～34歳における死亡者数及び死亡率</p>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th> </th>
+                        <th colspan="3">
+                            <div class="text-center">日本(2011年)</div>
+                        </th>
+                        <th colspan="3">
+                            <div class="text-center">フランス(2010年)</div>
+                        </th>
+                        <th colspan="3">
+                            <div class="text-center">ドイツ(2012年)</div>
+                        </th>
+                        <th colspan="3">
+                            <div class="text-center">カナダ(2009年)</div>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th> </th>
+                        <th>
+                            <div class="text-center">死因</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡数</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡率</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死因</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡数</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡率</div>
+                        </th>
+                        <th> </th>
+                        <th>
+                            <div class="text-center">死亡数</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡率</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死因</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡数</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡率</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="text-center">第１位</div>
+                        </td>
+                        <td class="bg-danger">自殺</td>
+                        <td class="bg-danger">
+                            <div class="text-right">5,436</div>
+                        </td>
+                        <td class="bg-danger">
+                            <div class="text-right">20.1</div>
+                        </td>
+                        <td>事故</td>
+                        <td>
+                            <div class="text-right">2,136</div>
+                        </td>
+                        <td>
+                            <div class="text-right">13.8</div>
+                        </td>
+                        <td>事故</td>
+                        <td>
+                            <div class="text-right">1,722</div>
+                        </td>
+                        <td>
+                            <div class="text-right">9.3</div>
+                        </td>
+                        <td>事故</td>
+                        <td>
+                            <div class="text-right">1,721</div>
+                        </td>
+                        <td>
+                            <div class="text-right">18.7</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-center">第２位</div>
+                        </td>
+                        <td>事故</td>
+                        <td>
+                            <div class="text-right">1,916</div>
+                        </td>
+                        <td>
+                            <div class="text-right">7.1</div>
+                        </td>
+                        <td class="bg-danger">自殺</td>
+                        <td class="bg-danger">
+                            <div class="text-right">1,484</div>
+                        </td>
+                        <td class="bg-danger">
+                            <div class="text-right">9.6</div>
+                        </td>
+                        <td class="bg-danger">自殺</td>
+                        <td class="bg-danger">
+                            <div class="text-right">1,446</div>
+                        </td>
+                        <td class="bg-danger">
+                            <div class="text-right">7.6</div>
+                        </td>
+                        <td class="bg-danger">自殺</td>
+                        <td class="bg-danger">
+                            <div class="text-right">1,035</div>
+                        </td>
+                        <td class="bg-danger">
+                            <div class="text-right">11.2</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-center">第３位</div>
+                        </td>
+                        <td>その他</td>
+                        <td>
+                            <div class="text-right">1,499</div>
+                        </td>
+                        <td>
+                            <div class="text-right">5.5</div>
+                        </td>
+                        <td>その他</td>
+                        <td>
+                            <div class="text-right">1,064</div>
+                        </td>
+                        <td>
+                            <div class="text-right">6.9</div>
+                        </td>
+                        <td>悪性新生物</td>
+                        <td>
+                            <div class="text-right">1,088</div>
+                        </td>
+                        <td>
+                            <div class="text-right">5.3</div>
+                        </td>
+                        <td>悪性新生物</td>
+                        <td>
+                            <div class="text-right">502</div>
+                        </td>
+                        <td>
+                            <div class="text-right">5.5</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th> </th>
+                        <th colspan="3">
+                            <div class="text-center">アメリカ(2010年)</div>
+                        </th>
+                        <th colspan="3">
+                            <div class="text-center">イギリス(2010年)</div>
+                        </th>
+                        <th colspan="3">
+                            <div class="text-center">イタリア(2010年)</div>
+                        </th>
+                        <th colspan="3">
+                            <div class="text-center">韓国[参考](2011年)</div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th> </th>
+                        <th>
+                            <div class="text-center">死因</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡数</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡率</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死因</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡数</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡率</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死因</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡数</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡率</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死因</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡数</div>
+                        </th>
+                        <th>
+                            <div class="text-center">死亡率</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="text-center">第１位</div>
+                        </td>
+                        <td>事故</td>
+                        <td>
+                            <div class="text-right">27,171</div>
+                        </td>
+                        <td>
+                            <div class="text-right">31.7</div>
+                        </td>
+                        <td>事故</td>
+                        <td>
+                            <div class="text-right">2,071</div>
+                        </td>
+                        <td>
+                            <div class="text-right">12.7</div>
+                        </td>
+                        <td>事故</td>
+                        <td>
+                            <div class="text-right">1,806</div>
+                        </td>
+                        <td>
+                            <div class="text-right">13.2</div>
+                        </td>
+                        <td class="bg-danger">自殺</td>
+                        <td class="bg-danger">
+                            <div class="text-right">3,160</div>
+                        </td>
+                        <td class="bg-danger">
+                            <div class="text-right">22.2</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-center">第２位</div>
+                        </td>
+                        <td class="bg-danger">自殺</td>
+                        <td class="bg-danger">
+                            <div class="text-right">10,339</div>
+                        </td>
+                        <td class="bg-danger">
+                            <div class="text-right">12.1</div>
+                        </td>
+                        <td class="bg-danger">自殺</td>
+                        <td class="bg-danger">
+                            <div class="text-right">1,096</div>
+                        </td>
+                        <td class="bg-danger">
+                            <div class="text-right">6.7</div>
+                        </td>
+                        <td>悪性新生物</td>
+                        <td>
+                            <div class="text-right">931</div>
+                        </td>
+                        <td>
+                            <div class="text-right">6.8</div>
+                        </td>
+                        <td>事故</td>
+                        <td>
+                            <div class="text-right">1,488</div>
+                        </td>
+                        <td>
+                            <div class="text-right">10.4</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="text-center">第３位</div>
+                        </td>
+                        <td>殺人</td>
+                        <td>
+                            <div class="text-right">9,000</div>
+                        </td>
+                        <td>
+                            <div class="text-right">10.5</div>
+                        </td>
+                        <td>悪性新生物</td>
+                        <td>
+                            <div class="text-right">1,032</div>
+                        </td>
+                        <td>
+                            <div class="text-right">6.3</div>
+                        </td>
+                        <td class="bg-danger">自殺</td>
+                        <td class="bg-danger">
+                            <div class="text-right">598</div>
+                        </td>
+                        <td class="bg-danger">
+                            <div class="text-right">4.4</div>
+                        </td>
+                        <td>悪性新生物</td>
+                        <td>
+                            <div class="text-right">901</div>
+                        </td>
+                        <td>
+                            <div class="text-right">6.3</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="row">
+            <div id="chart1" class="col-md-6"></div>
+            <div class="col-md-6">
+
+                <p>表1は主要8か国における死因の1位から3位までの自殺者数・自殺率をまとめたもので、図1は自殺と事故による死亡率をグラフにしたものである。</p>
+                <p>日本の自殺者数・自殺率は主要国の中でも高い水準となっており、日本と韓国は自殺による死亡者数が死因の第1位となっている。</p>
+
+                <p>また、日本と韓国の死亡率を比べると、韓国では自殺死亡率が事故死亡率の2倍程度であるのに対し、日本では約3倍であり、自殺によって死亡する人の割合が高いことがわかる。</p>
+            </div>
+
+    </article>
+
+
+
+    <footer>
+        <ol class="breadcrumb">
+            <li class="active">はじめに</a>
+            </li>
+            <li><a href="kadai02.html">20年間の推移</a>
+            </li>
+            <li><a href="kadai03.html">小中高生の状況</a>
+            </li>
+            <li><a href="kadai04.html">予防策</a>
+            </li>
+            <li><a href="kadai05.html">参考サイト</a>
+            </li>
+        </ol>
+
+        <div class="text-center"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>2015　日本の自殺問題について＠白木美帆</div>
+
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
