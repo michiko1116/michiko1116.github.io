@@ -1,1 +1,11 @@
-body { background: skyblue; }
+.syoukai {
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside
+}
+        
+.jouhou {
+    color: hotpink
+}
