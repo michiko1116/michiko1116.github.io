@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
- 
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['geochart']});
-      google.charts.setOnLoadCallback(Chart01);
+      google.charts.setOnLoadCallback(drawChart);
 
-      function Chart01() {
+      function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-                ['都道府県', '人数'],
+          ['都道府県', '人数'],
                 ['北海道', 177],
                 ['青森', 40],
                 ['岩手', 80],
@@ -69,13 +71,8 @@
 
         var option = {
                 region: 'JP',
-                resolution: 'provinces',
-                width: 800,
-                height: 400,
-                legend: {
-                    position: 'none'
-                },
-            };
+                dataMode: regions,
+                };
 
         var chart = new google.visualization.GeoChart(document.getElementById('chart01'));
 
@@ -86,31 +83,13 @@
 
   
   <body>
-    <div class="container">
-
-        <h1 class="alert alert-info">交通事故死者数について</h1>
-        <h3>都道府県別死亡者数(2015年)</h3>
-        <div id="chart01" class="hidden-xs"></div>
-        <img src="image/geochart01.jpg" alt="交通事故死者数のチャート" class="visible-xs" width="240">
-
-        
-    </div>
-
-    
-
-    <h3>参考サイト</h3>
-    <ul>
-        <li>
-            <a href="http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617" target="_blank">e-Stat</a>
-        </li>
-        <li>
-            <a href="http://www.airia.or.jp/publish/statistics/number.html" target="_blank">一般財団法人　自動車検査登録情報協会</a>
-        </li>
-    </ul>
-    
+   
+    <div id="chart01"></div>
+   
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-</body>
-
+  </body>
 </html>

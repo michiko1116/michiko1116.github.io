@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2016年度課題</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['geochart']});
+        google.charts.setOnLoadCallback(Chart01);
+        function Chart01() {
+            var data = google.visualization.arrayToDataTable([
+                ['都道府県', '交通事故死者数'],
+                ['北海道', 177],
+                ['青森', 40],
+                ['岩手', 80],
+                ['宮城', 66],
+                ['秋田', 38],
+                ['山形', 57],
+                ['福島', 77],
+                ['茨城', 140],
+                ['栃木', 98],
+                ['群馬', 68],
+                ['埼玉', 177],
+                ['千葉', 180],
+                ['東京', 161],
+                ['神奈川', 178],
+                ['新潟', 97],
+                ['山梨', 33],
+                ['長野', 69],
+                ['静岡', 153],
+                ['富山', 70],
+                ['石川', 46],
+                ['福井', 47],
+                ['岐阜', 106],
+                ['愛知', 213],
+                ['三重', 87],
+                ['滋賀', 73],
+                ['京都', 87],
+                ['大阪', 196],
+                ['兵庫', 171],
+                ['奈良', 46],
+                ['和歌山', 48],
+                ['鳥取', 38],
+                ['島根', 27],
+                ['岡山', 87],
+                ['広島', 95],
+                ['山口', 64],
+                ['徳島', 27],
+                ['香川', 52],
+                ['愛媛', 78],
+                ['高知', 30],
+                ['福岡', 152],
+                ['佐賀', 48],
+                ['長崎', 45],
+                ['熊本', 79],
+                ['大分', 46],
+                ['宮崎', 52],
+                ['鹿児島', 77],
+                ['沖縄', 41],
+            ]);
+            
+            var option = {
+                region: 'JP',
+                resolution: 'provinces',
+                width: 800,
+                height: 400,
+                legend: {
+                    position: 'none'
+                },
+            };
+            var chart = new google.visualization.GeoChart(document.getElementById('chart01'));
+            chart.draw(data, option);
+        };
+        
+    
+    </script>
+
+</head>
+
+
+<body>
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">2015年の交通事故について</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container" style="padding-top: 60px;">
+    <div class="jumbotron">
+        <h1>私のサイトへようこそ</h1>
+        <p>このサイトには2015年に起きた交通事故のデータを載せています。</p>
+      </div>
+    </div>
+    
+    <div class="container">
+        <h3>都道府県別死亡者数(2015年)</h3>
+        <div id="chart01" class="hidden-xs"></div>
+    </div>
+
+    
+
+    <h3>参考サイト</h3>
+    <ul>
+        <li slass="sankou">e-Stat　<a href="http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617">[http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617]</a>
+        </li>
+        <li class="sankou">一般財団法人　自動車検査登録情報協会　<a href="http://www.airia.or.jp/publish/statistics/number.html" target="_blank">http://www.airia.or.jp/publish/statistics/number.html</a>
+        </li>
+    </ul>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
