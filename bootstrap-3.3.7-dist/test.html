@@ -11,58 +11,130 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.charts.load('current', {'packages': ['geochart']});
-        google.charts.setOnLoadCallback(Chart01);
-        function Chart01() {
+        google.load('visualization', '1', {
+            packages: ['geochart']
+        });
+        google.setOnLoadCallback(Chart1);
+
+        function Chart1() {
+
             var data = google.visualization.arrayToDataTable([
-                ['都道府県', '交通事故死者数'],
-                ['北海道', 177],
-                ['青森', 40],
-                ['岩手', 80],
-                ['宮城', 66],
-                ['秋田', 38],
-                ['山形', 57],
-                ['福島', 77],
-                ['茨城', 140],
-                ['栃木', 98],
-                ['群馬', 68],
-                ['埼玉', 177],
-                ['千葉', 180],
-                ['東京', 161],
-                ['神奈川', 178],
-                ['新潟', 97],
-                ['山梨', 33],
-                ['長野', 69],
-                ['静岡', 153],
-                ['富山', 70],
-                ['石川', 46],
-                ['福井', 47],
-                ['岐阜', 106],
-                ['愛知', 213],
-                ['三重', 87],
-                ['滋賀', 73],
-                ['京都', 87],
-                ['大阪', 196],
-                ['兵庫', 171],
-                ['奈良', 46],
-                ['和歌山', 48],
-                ['鳥取', 38],
-                ['島根', 27],
-                ['岡山', 87],
-                ['広島', 95],
-                ['山口', 64],
-                ['徳島', 27],
+                ['都道府県', ''],
+                ['北海道', 12274],
+                ['青森', 4133],
+                ['岩手', 2712],
+                ['宮城', 9142],
+                ['秋田', 2270],
+                ['山形', 6426],
+                ['福島', 7710],
+                ['東京', 37184],
+                ['茨城', 12534],
+                ['栃木', 6413],
+                ['群馬', 16316],
+                ['埼玉', 30821],
+                ['千葉', 19705],
+                ['神奈川', 30434],
+                ['新潟', 6317],
+                ['山梨', 4514],
+                ['長野', 9283],
+                ['静岡', 33499],
+                ['富山', 4379],
+                ['石川', 4074],
+                ['福井', 2416],
+                ['岐阜', 8250],
+                ['愛知', 46131],
+                ['三重', 8100],
+                ['滋賀', 6598],
+                ['京都', 10185],
+                ['大阪', 42729],
+                ['兵庫', 30118],
+                ['奈良', 5868],
+                ['和歌山', 4115],
+                ['鳥取', 1168],
+                ['島根', 1583],
+                ['岡山', 12271],
+                ['広島', 12479],
+                ['山口', 6268],
+                ['徳島', 4372],
+                ['香川', 8942],
+                ['愛媛', 5745],
+                ['高知', 2690],
+                ['福岡', 41168],
+                ['佐賀', 8870],
+                ['長崎', 6465],
+                ['熊本', 7584],
+                ['大分', 5161],
+                ['宮崎', 9759],
+                ['鹿児島', 8425],
+                ['沖縄', 6242],
+            ]);
+
+            var option = {
+                region: 'JP',
+                resolution: 'provinces',
+                width: 900,
+                height: 500,
+                legend: {
+                    position: 'none'
+                },
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('chart1'));
+            chart.draw(data, option);
+        }
+        
+        google.charts.load('current', {'packages': ['geochart']});
+        google.charts.setOnLoadCallback(Chart2);
+        function Chart2() {
+            var data = google.visualization.arrayToDataTable([
+                ['都道府県', ''],
+                ['北海道', 169],
+                ['青森', 54],
+                ['岩手', 64],
+                ['宮城', 83],
+                ['秋田', 37],
+                ['山形', 44],
+                ['福島', 87],
+                ['東京', 172],
+                ['茨城', 132],
+                ['栃木', 102],
+                ['群馬', 67],
+                ['埼玉', 173],
+                ['千葉', 182],
+                ['神奈川', 185],
+                ['新潟', 103],
+                ['山梨', 49],
+                ['長野', 82],
+                ['静岡', 143],
+                ['富山', 44],
+                ['石川', 55],
+                ['福井', 49],
+                ['岐阜', 93],
+                ['愛知', 204],
+                ['三重', 112],
+                ['滋賀', 63],
+                ['京都', 69],
+                ['大阪', 143],
+                ['兵庫', 182],
+                ['奈良', 45],
+                ['和歌山', 39],
+                ['鳥取', 34],
+                ['島根', 26],
+                ['岡山', 90],
+                ['広島', 117],
+                ['山口', 58],
+                ['徳島', 31],
                 ['香川', 52],
-                ['愛媛', 78],
-                ['高知', 30],
-                ['福岡', 152],
-                ['佐賀', 48],
-                ['長崎', 45],
-                ['熊本', 79],
-                ['大分', 46],
-                ['宮崎', 52],
-                ['鹿児島', 77],
-                ['沖縄', 41],
+                ['愛媛', 75],
+                ['高知', 41],
+                ['福岡', 147],
+                ['佐賀', 56],
+                ['長崎', 49],
+                ['熊本', 76],
+                ['大分', 56],
+                ['宮崎', 49],
+                ['鹿児島', 94],
+                ['沖縄', 36],
             ]);
             
             var option = {
@@ -74,11 +146,9 @@
                     position: 'none'
                 },
             };
-            var chart = new google.visualization.GeoChart(document.getElementById('chart01'));
+            var chart = new google.visualization.GeoChart(document.getElementById('chart2'));
             chart.draw(data, option);
         };
-        
-    
     </script>
 
 </head>
@@ -94,7 +164,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">2015年の交通事故について</a>
+          <a class="navbar-brand" href="#">2014年の交通事故について</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
@@ -113,22 +183,25 @@
     <div class="container" style="padding-top: 60px;">
     <div class="jumbotron">
         <h1>私のサイトへようこそ</h1>
-        <p>このサイトには2015年に起きた交通事故のデータを載せています。</p>
+        <p>このサイトには2014年に起きた交通事故のデータを載せています。</p>
       </div>
     </div>
     
     <div class="container">
-        <h3>都道府県別死亡者数(2015年)</h3>
-        <div id="chart01" class="hidden-xs"></div>
+        <h2>都道府県別事故件数</h2>
+        <div id="chart1" class="hidden-xs"></div>
     </div>
 
-    
+<div class="container">
+        <h2>都道府県別死亡者数/h2>
+        <div id="chart2" class="hidden-xs"></div>
+    </div>
 
-    <h3>参考サイト</h3>
-    <ul>
+    <h2 style="padding-left: 60px;">参考サイト</h2>
+    <ul style="padding-left: 100px;">
         <li slass="sankou">e-Stat　<a href="http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617">[http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617]</a>
         </li>
-        <li class="sankou">一般財団法人　自動車検査登録情報協会　<a href="http://www.airia.or.jp/publish/statistics/number.html" target="_blank">http://www.airia.or.jp/publish/statistics/number.html</a>
+         <li slass="sankou">総務省統計局　第六十五回日本統計年鑑　<a href="http://www.stat.go.jp/data/nenkan/29.htm">[http://www.stat.go.jp/data/nenkan/29.htm]</a>
         </li>
     </ul>
     
