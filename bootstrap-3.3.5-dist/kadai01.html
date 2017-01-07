@@ -32,7 +32,7 @@
         ]);
 
             var options = {
-                title: '[図１] 主要国における自殺及び事故による死亡率　　(単位：人/10万人)',
+                title: '[図１] 主要国における自殺及び事故による死亡率  (単位：人/10万人)',
                 width: 650,
                 height: 400,
             }
@@ -44,11 +44,39 @@
 </head>
 
 <header>
-    <h1 class="title">日本の自殺問題について</h1>
+   　<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs" href="">日本の自殺問題について</a>
+        </div>
 
-    <hr>
+        <div class="collapse navbar-collapse target">
+            <ul class="nav navbar-nav">
+                <li><a href="#">日本の自殺問題について</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ 
+</header>
 
-    <nav class="navbar navbar-default">
+
+
+<body class="container-fluid">
+      
+     <div class="container" style="padding-top: 60px;">
+        <div class="jumbotron">
+            <h1>日本の自殺問題について</h1>
+            <h3>このページには日本の自殺者数に関するデータをのせています。</h3>
+        </div>
+    </div>
+
+  <nav class="navbar navbar-default">
+       <div  class="container-fluid">
         <div class="navbar-header">
             <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
                 <span class="icon-bar"></span>
@@ -72,15 +100,9 @@
                 </li>
             </ul>
         </div>
+        </div>
     </nav>
-
-</header>
-
-
-
-<body>
-
-
+   
     <article>
         <h2>1－1．はじめに</h2>
 
@@ -414,7 +436,10 @@
         <div class="row">
             <div id="chart1" class="col-md-6"></div>
             <div class="col-md-6">
-
+                <br>
+                <br>
+                <br>
+                <br>
                 <p>表1は主要8か国における死因の1位から3位までの自殺者数・自殺率をまとめたもので、図1は自殺と事故による死亡率をグラフにしたものである。</p>
                 <p>日本の自殺者数・自殺率は主要国の中でも高い水準となっており、日本と韓国は自殺による死亡者数が死因の第1位となっている。</p>
 

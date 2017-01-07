@@ -43,7 +43,7 @@
         ]);
 
             var options = {
-                title: '[図２] 自殺者数の推移　　　　　　　　　　　　　　　　　(単位：人)',
+                title: '[図２] 自殺者数の推移　  (単位：人)',
                 width: 600,
                 height: 400,
                 isStacked: true,
@@ -90,7 +90,7 @@
         ]);
 
             var options = {
-                title: '[図３] 自殺率の推移　　　　　　　　　　　　　　　　　(単位：人/10万人)',
+                title: '[図３] 自殺率の推移  　(単位：人/10万人)',
                 width: 600,
                 height: 400,
             }
@@ -104,10 +104,31 @@
 
 
 <header>
-    <h1 class="title">日本の自殺問題について</h1>
-    <hr>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs" href="">日本の自殺問題について</a>
+        </div>
 
-    <nav class="navbar navbar-default">
+        <div class="collapse navbar-collapse target">
+            <ul class="nav navbar-nav">
+                <li><a href="#">日本の自殺問題について</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+</header>
+
+
+
+<body class="container-fluid">
+    <nav class="navbar navbar-default" style="margin-top:60px;">
         <div class="navbar-header">
             <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
                 <span class="icon-bar"></span>
@@ -132,20 +153,15 @@
             </ul>
         </div>
     </nav>
-
-</header>
-
-
-
-<body>
-
-
     <article>
         <h2>２．日本の自殺者数と自殺率の推移</h2>
         <div class="row">
             <div id="chart2" class="col-md-6"></div>
 
             <div class="col-md-6">
+               <br>
+               <br>
+               <br>
                 <p>図２は、1995年から2014年までの20年間の自殺者数の推移を表したものである。</p>
                 <p>自殺者の総数は2003年の34,427人をピークに徐々に減少しており、2014年にはピーク時の約74％である25,427人となった。どの年でも女性より男性のほうが死亡者数が多く、約1.96倍から2.64倍となっている。</p>
                 <p>2014年のデータによると男女とも自殺の原因として最も多いのは健康問題であり、次いで男性は経済・生活問題、女性は家庭問題が多くなっている。男性の自殺者が多いのは家庭への経済的責任が重いことや女性に比べうつ病などによる受療率が低いことが原因であると考えられる。</p>
@@ -156,6 +172,9 @@
             <div id="chart3" class="col-md-6"></div>
 
             <div class="col-md-6">
+               <br>
+               <br>
+               <br>
                 <p>図３は、1995年から2014年までの20年間の自殺率の推移を表したものである。</p>
                 <p>自殺率とは、人口10万人当たりの自殺者数を示しており、自殺者数÷人口×100,000という式で算出される。</p>
                 <p>自殺者数同様、自殺率も女性より男性のほうが高く、約2.05倍から2.76倍と非常に高い値となっている。男性の自殺率は2009年以降5年連続で減少しており、2014年には28.1人/10万人となった。しかし、それでも女性の2倍以上となっており、依然として高い値となっている。</p>

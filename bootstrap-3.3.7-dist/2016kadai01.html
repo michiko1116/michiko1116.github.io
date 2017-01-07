@@ -1,24 +1,97 @@
 <!DOCTYPE html>
 <html lang="ja">
- 
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>2016年度課題</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['geochart']});
-      google.charts.setOnLoadCallback(Chart01);
+        google.load('visualization', '1', {
+            packages: ['geochart']
+        });
+        google.setOnLoadCallback(Chart1);
 
-      function Chart01() {
+        function Chart1() {
 
-        var data = google.visualization.arrayToDataTable([
-                ['都道府県', '人数'],
-                ['北海道', 177],
+            var data = google.visualization.arrayToDataTable([
+                ['都道府県', ''],
+                ['北海道', 11123],
+                ['青森', 3854],
+                ['岩手', 2560],
+                ['宮城', 8624],
+                ['秋田', 2151],
+                ['山形', 6446],
+                ['福島', 6894],
+                ['東京', 34274],
+                ['茨城', 11613],
+                ['栃木', 6327],
+                ['群馬', 15229],
+                ['埼玉', 29528],
+                ['千葉', 18650],
+                ['神奈川', 28313],
+                ['新潟', 5345],
+                ['山梨', 4621],
+                ['長野', 8865],
+                ['静岡', 32491],
+                ['富山', 3945],
+                ['石川', 3791],
+                ['福井', 2188],
+                ['岐阜', 7400],
+                ['愛知', 44369],
+                ['三重', 7169],
+                ['滋賀', 5879],
+                ['京都', 9328],
+                ['大阪', 40607],
+                ['兵庫', 28542],
+                ['奈良', 5078],
+                ['和歌山', 3498],
+                ['鳥取', 1053],
+                ['島根', 1388],
+                ['岡山', 10627],
+                ['広島', 11152],
+                ['山口', 5727],
+                ['徳島', 3866],
+                ['香川', 7823],
+                ['愛媛', 5086],
+                ['高知', 2391],
+                ['福岡', 39734],
+                ['佐賀', 8561],
+                ['長崎', 6121],
+                ['熊本', 6641],
+                ['大分', 4917],
+                ['宮崎', 9455],
+                ['鹿児島', 8034],
+                ['沖縄', 5621],
+            ]);
+
+            var option = {
+                region: 'JP',
+                resolution: 'provinces',
+                width: 900,
+                height: 500,
+                legend: {
+                    position: 'none'
+                },
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('chart1'));
+            chart.draw(data, option);
+        };
+    
+        
+        google.load('visualization', '1', {
+            packages: ['geochart']
+        });
+        google.setOnLoadCallback(Chart2);
+        function Chart2() {
+            var data = google.visualization.arrayToDataTable([
+                ['都道府県', '',],
+                ['北海道', 177,],
                 ['青森', 40],
                 ['岩手', 80],
                 ['宮城', 66],
@@ -64,47 +137,169 @@
                 ['大分', 46],
                 ['宮崎', 52],
                 ['鹿児島', 77],
-                ['沖縄', 41]
-        ]);
-
-        var option = {
+                ['沖縄', 41],
+            ]);
+            
+            var option = {
                 region: 'JP',
                 resolution: 'provinces',
-                width: 800,
-                height: 400,
+                width: 900,
+                height: 500,
                 legend: {
                     position: 'none'
                 },
             };
-
-        var chart = new google.visualization.GeoChart(document.getElementById('chart01'));
-
-        chart.draw(data, options);
-      };
-    </script>
-    </head>
-
-  
-  <body>
-    <div class="container">
-
-        <h1 class="alert alert-info">交通事故死者数について</h1>
-        <h3>都道府県別死亡者数(2015年)</h3>
-        <div id="chart01" class="hidden-xs"></div>
-        <img src="image/geochart01.jpg" alt="交通事故死者数のチャート" class="visible-xs" width="240">
-
+            var chart = new google.visualization.GeoChart(document.getElementById('chart2'));
+            chart.draw(data, option);
+        };
         
+        
+        google.load('visualization', '1', {
+            packages: ['geochart']
+        });
+        google.setOnLoadCallback(Chart3);
+        function Chart3() {
+            var data = google.visualization.arrayToDataTable([
+                ['都道府県', '',],
+                ['北海道', 3.3],
+                ['青森', 3.0],
+                ['岩手', 6.2],
+                ['宮城', 2.8],
+                ['秋田', 3.7],
+                ['山形', 5.0],
+                ['福島', 4.0],
+                ['東京', 1.2],
+                ['茨城', 4.8],
+                ['栃木', 4.9],
+                ['群馬', 3.4],
+                ['埼玉', 2.4],
+                ['千葉', 2.9],
+                ['神奈川', 2.0],
+                ['新潟', 4.2],
+                ['山梨', 3.9],
+                ['長野', 3.3],
+                ['静岡', 4.1],
+                ['富山', 6.5],
+                ['石川', 4.0],
+                ['福井', 5.9],
+                ['岐阜', 5.2],
+                ['愛知', 2.9],
+                ['三重', 4.8],
+                ['滋賀', 5.2],
+                ['京都', 3.3],
+                ['大阪', 2.2],
+                ['兵庫', 3.1],
+                ['奈良', 3.3],
+                ['和歌山', 4.9],
+                ['鳥取', 6.6],
+                ['島根', 3.9],
+                ['岡山', 4.5],
+                ['広島', 3.4],
+                ['山口', 4.5],
+                ['徳島', 3.5],
+                ['香川', 5.3],
+                ['愛媛', 5.6],
+                ['高知', 4.1],
+                ['福岡', 3.0],
+                ['佐賀', 5.7],
+                ['長崎', 3.2],
+                ['熊本', 4.4],
+                ['大分', 3.9],
+                ['宮崎', 4.7],
+                ['鹿児島', 4.6],
+                ['沖縄', 2.9],
+            ]);
+            
+            var option = {
+                region: 'JP',
+                resolution: 'provinces',
+                width: 900,
+                height: 500,
+                legend: {
+                    position: 'none'
+                },
+            };
+            var chart = new google.visualization.GeoChart(document.getElementById('chart3'));
+            chart.draw(data, option);
+        };
+    </script>
+
+</head>
+
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">2015年の交通事故について</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 60px;">
+        <div class="jumbotron">
+            <h1>2015年の交通事故について</h1>
+            <h3>このサイトには2015年に起きた交通事故のデータを載せています。</h3>
+        </div>
+    </div>
+</header>
+
+
+<body> 
+    <div class="container-fluid">
+        <h2>都道府県別事故件数</h2>
+        <div id="chart1"></div>
+        <br>
+        <p>上の地図を見ると、特に大都市において事故が多く起きていることがわかります。</p>
+        <p>都市部では交通量や渋滞が多いことから事故が起きやすいのではないかと考えられます。</p>
+    </div>
+    
+    
+    <hr>
+
+    <div class="container-fluid">
+        <h2>都道府県別死亡者数</h2>
+        <div id="chart2"></div>
+        <br>
+        <p>死亡者数も事故件数と同様に、都市部のほうが地方に比べ多くなっています。</p>
+        <p>「愛知県は事故による死亡者が多い」というのを耳にすることがありますが、2015年は全国で一番多くなっています。</p>
     </div>
 
-    
-
-    <h3>参考サイト</h3>
+  <hr>
+  
+   <div class="container-fluid">
+        <h2>都道府県別死亡者数(10万人あたり)</h2>
+        <div id="chart3"></div>
+        <br>
+        <p>10万人あたりの死亡者数は都市部に比べ、地方のほうが多くなっています。</p>
+        <p>これは、都市部には人口が集中しているからだと考えられます。</p>
+    </div>
+  
+  <hr>
+  
+   <div class="container-fluid">
+        <h2>法令違反別交通事故件数</h2>
+        <div>
+         <iframe width="600" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1M2txmd4oYMmC97x9pBfh1LJvE9zddRbLTkv2Z34_Xbc/pubchart?oid=1320221698&format=interactive"></iframe>
+         </div>
+         <br>
+         <p>事故の原因を見ると、運転者の不注意による事故が多いことがわかります。</p>
+         <p>運転者自身がこれまで以上に周囲に注意を払い、また、可能であれば周囲の危険を察知できるような仕組みを作ることができれば事故は減少していくのではないかと思います。</p>
+    </div>
+   
+   <hr>
+    <h2>参考サイト</h2>
     <ul>
-        <li>
-            <a href="http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617" target="_blank">e-Stat</a>
+        <li class="sankou">・e-Stat 政府統計の総合窓口 <a href="http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617">http://www.e-stat.go.jp/SG1/estat/List.do?lid=000001142617</a>
         </li>
-        <li>
-            <a href="http://www.airia.or.jp/publish/statistics/number.html" target="_blank">一般財団法人　自動車検査登録情報協会</a>
+         <li class="sankou">・平成28年警察白書　統計資料 <a href="https://www.npa.go.jp/hakusyo/h28/data.html">https://www.npa.go.jp/hakusyo/h28/data.html</a>
         </li>
     </ul>
     
