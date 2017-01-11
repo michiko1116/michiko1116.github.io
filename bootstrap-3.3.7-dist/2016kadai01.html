@@ -230,17 +230,16 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
+                
                 <a class="navbar-brand" href="#">2015年の交通事故について</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
             </div>
-            <!--/.navbar-collapse -->
         </div>
     </nav>
     <div class="container" style="padding-top: 60px;">
@@ -255,8 +254,9 @@
 <body> 
     <div class="container-fluid">
         <h2>都道府県別事故件数</h2>
-        <div id="chart1"></div>
-        <br>
+        <div id="chart1" class="hidden-xs"></div>
+        <img src="/imagefile/geochart01.jpg" alt="交通事故件数" class="visible-xs" width="400">
+        <br>　 
         <p>上の地図を見ると、特に大都市において事故が多く起きていることがわかります。</p>
         <p>都市部では交通量や渋滞が多いことから事故が起きやすいのではないかと考えられます。</p>
     </div>
@@ -266,7 +266,8 @@
 
     <div class="container-fluid">
         <h2>都道府県別死亡者数</h2>
-        <div id="chart2"></div>
+        <div id="chart2" class="hidden-xs"></div>
+        <img src="/imagefile/geochart02.jpg" alt="交通事故死亡者数" class="visible-xs" width="400">
         <br>
         <p>死亡者数も事故件数と同様に、都市部のほうが地方に比べ多くなっています。</p>
         <p>「愛知県は事故による死亡者が多い」というのを耳にすることがありますが、2015年は全国で一番多くなっています。</p>
@@ -276,7 +277,8 @@
   
    <div class="container-fluid">
         <h2>都道府県別死亡者数(10万人あたり)</h2>
-        <div id="chart3"></div>
+        <div id="chart3" class="hidden-xs"></div>
+        <img src="/imagefile/geochart03.jpg" alt="交通事故死亡者数(10万人あたり)" class="visible-xs" width="400">
         <br>
         <p>10万人あたりの死亡者数は都市部に比べ、地方のほうが多くなっています。</p>
         <p>これは、都市部には人口が集中しているからだと考えられます。</p>
@@ -287,8 +289,9 @@
    <div class="container-fluid">
         <h2>法令違反別交通事故件数</h2>
         <div>
-         <iframe width="600" height="350" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1M2txmd4oYMmC97x9pBfh1LJvE9zddRbLTkv2Z34_Xbc/pubchart?oid=1320221698&format=interactive"></iframe>
+         <iframe width="600" height="350" seamless frameborder="0" scrolling="no"  class="hidden-xs" src="https://docs.google.com/spreadsheets/d/1M2txmd4oYMmC97x9pBfh1LJvE9zddRbLTkv2Z34_Xbc/pubchart?oid=1320221698&format=interactive"></iframe>
          </div>
+         <img src="/imagefile/piechart01.jpg" alt="法令違反別事故件数" class="visible-xs" width="400">
          <br>
          <p>事故の原因を見ると、運転者の不注意による事故が多いことがわかります。</p>
          <p>運転者自身がこれまで以上に周囲に注意を払い、また、可能であれば周囲の危険を察知できるような仕組みを作ることができれば事故は減少していくのではないかと思います。</p>
